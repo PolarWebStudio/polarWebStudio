@@ -1,0 +1,106 @@
+/*CSS Cuerpo, tarjetas de oferta productos*/
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+header h1 {
+  color: #003366;
+}
+
+.planes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  border: 1px solid #ddd;
+}
+
+.featured {
+  border: 2px solid #003366;
+  transform: scale(1.05);
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.price span {
+  font-size: 1rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+li {
+  margin-bottom: 10px;
+}
+
+.btn {
+  display: inline-block;
+  background: #003366;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+/*CSS Preguntas frecuentes*/
+
+.faq {
+  max-width: 800px;
+  margin: 50px auto;
+  text-align: left;
+  padding: 0 20px;
+}
+
+.faq h2 {
+  text-align: center;
+  color: #003366;
+}
+
+.faq-item {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 15px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+}
+
+.faq-question:hover {
+  color: #003366;
+}
+
+.faq-answer {
+  padding: 0 15px 15px;
+  color: #666;
+  line-height: 1.6;
+}

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Polar Web Studio | Planes</title>
+    <link rel="stylesheet" href="estilo.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Polar Web Studio</h1>
+      <p>Diseño Digital y Desarrollo Web</p>
+    </header>
+
+    <section class="planes">
+      <div class="card">
+        <h2>Plan Lanzamiento</h2>
+        <p class="price">$200.000 <span>COP</span></p>
+        <ul>
+          <li>✅ Catálogo Digital</li>
+          <li>✅ Carrito de Compras</li>
+          <li>✅ Pedido a WhatsApp</li>
+          <li>✅ Hosting Gratis (GitHub)</li>
+        </ul>
+        <a
+          href="https://wa.me/573155135785?text=Hola%20Polar%20Web%20Studio,%20me%20interesa%20el%20Plan%20Lanzamiento"
+          class="btn"
+          >Lo quiero</a
+        >
+      </div>
+
+      <div class="card featured">
+        <h2>Plan Profesional</h2>
+        <p class="price">$500.000 <span>COP</span></p>
+        <ul>
+          <li>✅ Todo lo del Plan Lanzamiento</li>
+          <li>✅ Dominio .com o .co</li>
+          <li>✅ 5 Secciones personalizadas</li>
+          <li>✅ Soporte Técnico</li>
+        </ul>
+        <a
+          href="https://wa.me/573155135785?text=Hola%20Polar%20Web%20Studio,%20me%20interesa%20el%20Plan%20Profesional"
+          class="btn"
+          >Más Info...</a
+        >
+      </div>
+    </section>
+    <section class="faq">
+      <h2>Preguntas Frecuentes</h2>
+
+      <div class="faq-item">
+        <button class="faq-question">¿Tengo que pagar mensualidades?</button>
+        <div class="faq-answer">
+          <p>
+            No. Con el Plan Lanzamiento y el Catálogo Emprendedor, el
+            alojamiento en la nube (GitHub) es gratuito de por vida. Solo pagas
+            una vez por el desarrollo.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          ¿Necesito saber de computadores para vender?
+        </button>
+        <div class="faq-answer">
+          <p>
+            Para nada. La página es intuitiva. Cuando un cliente compra, te
+            llega un mensaje organizado a tu WhatsApp con el pedido listo. ¡Tú
+            solo despachas!
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          ¿Qué pasa si quiero cambiar un precio después?
+        </button>
+        <div class="faq-answer">
+          <p>
+            Ofrecemos un servicio de mantenimiento económico o te enseñamos lo
+            básico para que tú mismo hagas ajustes pequeños en el catálogo.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">¿Mi página sale en Google?</button>
+        <div class="faq-answer">
+          <p>
+            Sí, aplicamos SEO básico para que tu negocio sea visible en los
+            motores de búsqueda de nivel nacional e internacional.
+          </p>
+        </div>
+      </div>
+    </section>
+    <script>
+      document.querySelectorAll(".faq-question").forEach((button) => {
+        button.addEventListener("click", () => {
+          const faqItem = button.parentElement;
+          faqItem.classList.toggle("active");
+          // Esto hace que la respuesta se oculte o se muestre
+          const answer = faqItem.querySelector(".faq-answer");
+          answer.style.display =
+            answer.style.display === "block" ? "none" : "block";
+        });
+      });
+    </script>
+  </body>
+</html>
