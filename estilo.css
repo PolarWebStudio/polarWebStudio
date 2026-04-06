@@ -89,6 +89,7 @@ header .text-container p {
 .grid-planes {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  justify-content: center;
   gap: 30px;
   margin: 0 auto;
 }
