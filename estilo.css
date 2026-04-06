@@ -295,3 +295,80 @@ header .text-container p {
   margin-top: 20px;
   font-weight: bold;
 }
+
+/* ==========================================================================
+   7. ADAPTABILIDAD MEDIA QUERIES
+   ========================================================================== */
+
+/* --- A. MÓVILES (Pantallas pequeñas hasta 600px) --- */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  header img {
+    width: 120px;
+  }
+
+  header .text-container h1 {
+    font-size: 1.8rem;
+  }
+
+  .grid-planes,
+  .grid-productos,
+  .grid-mascotas {
+    grid-template-columns: 1fr; /* Una sola columna en móvil */
+    padding: 10px;
+  }
+
+  .faq {
+    padding: 20px;
+  }
+}
+
+/* --- B. TABLETS Y FOLD ABIERTO (601px hasta 1024px) --- */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .grid-planes,
+  .grid-productos,
+  .grid-mascotas {
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    gap: 20px;
+    padding: 20px;
+  }
+
+  header .text-container h1,
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-seccion {
+    flex-direction: row;
+    text-align: left;
+    padding: 40px;
+  }
+
+  .tarjeta-producto img {
+    height: 250px;
+    object-fit: cover;
+  }
+}
+
+/* --- C. PORTÁTILES Y PANTALLAS ESTÁNDAR (1025px hasta 1200px) --- */
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .grid-planes {
+    grid-template-columns: repeat(3, 1fr); /* Ya caben tres columnas */
+  }
+}
+
+/* --- D. PANTALLAS GRANDES Y ALTA RESOLUCIÓN (Más de 1201px) --- */
+@media (min-width: 1201px) {
+  .planes-contenedor {
+    max-width: 1300px;
+  }
+
+  .grid-planes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
