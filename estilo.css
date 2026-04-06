@@ -1,30 +1,37 @@
 /*CSS Cuerpo, tarjetas de oferta productos*/
 
 /* 1. La Marca de Agua (Polar al fondo) */
+/* --- MARCA DE AGUA TOTAL --- */
 body::before {
   content: "";
-  position: fixed;
-  bottom: -50px;
-  right: -50px;
-  width: 300px;
-  height: 300px;
-  /* Usamos la ruta de tu logo que ya conocemos */
-  background-image: url("./imagenes/Logo/LogoNuevoPolarWeb.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  opacity: 0.05; /* Muy sutil para no estorbar */
-  z-index: -1; /* Esto lo manda al fondo de todo */
-  filter: grayscale(100%);
-  pointer-events: none; /* Esto evita que el logo "bloquee" los clics */
+  position: fixed; /* Mantiene la marca de agua fija al hacer scroll */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Cubre todo el ancho visible */
+  height: 100vh; /* Cubre todo el alto visible */
+
+  /* 🔥 NUEVA CONFIGURACIÓN DE IMAGEN */
+  background-image: url("./imagenes/Logo/LogoNuevoPolarWeb.png"); /* Ruta de tu nuevo logo */
+  background-size: contain; /* 🔥 Mantiene las proporciones del logo */
+  background-position: center; /* Centra el logo en la pantalla */
+  background-repeat: no-repeat; /* Solo un logo gigante centrado */
+
+  /* 🔥 AJUSTE DE VISIBILIDAD "ENTRE SUTIL Y CARGADO" */
+  opacity: 0.30; /* 🔄 ¡Aquí está la clave! Antes estaba en 0.05. Prueba entre 0.10 y 0.20 hasta que te guste. */
+
+  z-index: -2; /* Manda el fondo al último nivel, debajo de las tarjetas */
+  filter: grayscale(100%); /* Lo mantiene monocromático */
+  pointer-events: none; /* Evita que el logo "bloquee" los clics */
 }
 
 body {
-  font-family: "Segoe UI", Arial, sans-serif; /* Una letra más moderna */
-  background-color: #f4f4f4;
-  text-align: center; /* ESTO centra todo tu contenido de nuevo */
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f4f4f4; /* Mantenemos el fondo base */
+  text-align: center;
   margin: 0;
   padding: 0;
   min-height: 100vh;
+  overflow-x: hidden; /* Evita scrolls horizontales raros */
 }
 
 /* --- ESTILO DE LA CABECERA UNIFICADA --- */
