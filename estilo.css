@@ -1,14 +1,21 @@
 /*CSS Cuerpo, tarjetas de oferta productos*/
 
 /* 1. La Marca de Agua (Polar al fondo) */
-body {
-  /* ... tus otros estilos ... */
-  background-color: #f4f4f4;
-  background-image: radial-gradient(
-    #003366 0.5px,
-    #f4f4f4 0.6px
-  ); /* Pequeños puntos azules como nieve lejana */
-  background-size: 20px 20px;
+body::before {
+  content: "";
+  position: fixed;
+  bottom: -50px;
+  right: -50px;
+  width: 300px;
+  height: 300px;
+  /* Usamos la ruta de tu logo que ya conocemos */
+  background-image: url("./imagenes/Logo/LogoNuevoPolarWeb.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.05; /* Muy sutil para no estorbar */
+  z-index: -1; /* Esto lo manda al fondo de todo */
+  filter: grayscale(100%);
+  pointer-events: none; /* Esto evita que el logo "bloquee" los clics */
 }
 
 body {
@@ -19,6 +26,46 @@ body {
   padding: 0;
   min-height: 100vh;
 }
+
+/* --- ESTILO DE LA CABECERA UNIFICADA --- */
+header {
+  background-color: transparent; /* Fondo transparente para que se vea la marca de agua */
+  padding: 60px 20px; /* Aumentamos el padding para darle aire */
+  text-align: center; /* Alineamos el texto a la izquierda para el Flexbox */
+  max-width: 1200px; /* Ancho máximo para no desbordar en pantallas grandes */
+  margin: 0 auto; /* Centramos el header en la pantalla */
+
+  /* 🔥 ESTO ES LO QUE PONE EL LOGO AL LADO DEL TEXTO */
+  display: flex;
+  align-items: center; /* Centra verticalmente logo y texto */
+  justify-content: center; /* Centra el bloque completo en la pantalla */
+  gap: 30px; /* Espacio entre el logo y el bloque de texto */
+}
+
+/* Ajustes para el Nuevo Logo */
+header img {
+  width: 200px; /* 🔥 ¡Más grande! Ajusta este número si lo quieres aún más grande */
+  height: auto;
+  filter: drop-shadow(
+    0 4px 6px rgba(0, 0, 0, 0.1)
+  ); /* Sombra suave para darle profundidad */
+}
+
+/* Ajustes para el Título y Subtítulo */
+header .text-container h1 {
+  color: #003366; /* Tu azul característico */
+  font-size: 3rem; /* Título más imponente */
+  margin: 0 0 10px 0; /* Quitamos márgenes por defecto */
+  line-height: 1.2;
+}
+
+header .text-container p {
+  color: #555;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* 🔥 IMPORTANTE: Necesitas envolver tu H1 y P en un div en el HTML */
 
 header h1 {
   color: #003366;
