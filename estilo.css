@@ -2,26 +2,26 @@
 
 /* 1. La Marca de Agua (Polar al fondo) */
 /* --- MARCA DE AGUA TOTAL --- */
+/* --- MARCA DE AGUA TOTAL A COLOR --- */
 body::before {
   content: "";
-  position: fixed; /* Mantiene la marca de agua fija al hacer scroll */
+  position: fixed; /* Fijo al fondo */
   top: 0;
   left: 0;
-  width: 100vw; /* Cubre todo el ancho visible */
-  height: 100vh; /* Cubre todo el alto visible */
+  width: 100vw;
+  height: 100vh;
+  background-image: url("./imagenes/Logo/LogoNuevoPolarWeb.png"); /* Asegúrate de que esta ruta sea correcta */
+  background-size: contain; /* O 'cover', según prefieras, pero 'contain' lo mantiene completo */
+  background-position: center;
+  background-repeat: no-repeat;
 
-  /* 🔥 NUEVA CONFIGURACIÓN DE IMAGEN */
-  background-image: url("./imagenes/Logo/LogoNuevoPolarWeb.png"); /* Ruta de tu nuevo logo */
-  background-size: contain; /* 🔥 Mantiene las proporciones del logo */
-  background-position: center; /* Centra el logo en la pantalla */
-  background-repeat: no-repeat; /* Solo un logo gigante centrado */
+  /* 🔥 AJUSTE 1: QUITAR EL GRIS */
+  /* filter: grayscale(100%);  <-- 🔥 BORRA ESTA LÍNEA O COMENTALA ASÍ */
+  filter: none; /* O simplemente pon 'none' */
 
-  /* 🔥 AJUSTE DE VISIBILIDAD "ENTRE SUTIL Y CARGADO" */
-  opacity: 0.30; /* 🔄 ¡Aquí está la clave! Antes estaba en 0.05. Prueba entre 0.10 y 0.20 hasta que te guste. */
-
-  z-index: -2; /* Manda el fondo al último nivel, debajo de las tarjetas */
-  filter: grayscale(100%); /* Lo mantiene monocromático */
-  pointer-events: none; /* Evita que el logo "bloquee" los clics */
+  z-index: -2; /* Al final de todo, detrás de las tarjetas */
+  pointer-events: none; /* No interfiere con los clics */
+  opacity: 0.2; /* 🔄 ¡Aquí está tu control de mando! */
 }
 
 body {
@@ -37,7 +37,7 @@ body {
 /* --- ESTILO DE LA CABECERA UNIFICADA --- */
 header {
   background-color: transparent; /* Fondo transparente para que se vea la marca de agua */
-  padding: 60px 20px; /* Aumentamos el padding para darle aire */
+  padding: 10px 20px; /* Aumentamos el padding para darle aire */
   text-align: center; /* Alineamos el texto a la izquierda para el Flexbox */
   max-width: 1200px; /* Ancho máximo para no desbordar en pantallas grandes */
   margin: 0 auto; /* Centramos el header en la pantalla */
@@ -67,7 +67,7 @@ header .text-container h1 {
 }
 
 header .text-container p {
-  color: #555;
+  color: #100f0f;
   font-size: 1.2rem;
   margin: 0;
 }
@@ -94,6 +94,8 @@ li {
   margin: 50px auto;
   text-align: left;
   padding: 0 20px;
+  background-color: rgba(197, 197, 197, 0.5);
+  border-radius: 15px; /* Sugerencia: bordes redondeados para que combine con tus tarjetas */
 }
 
 .faq h2 {
@@ -115,7 +117,7 @@ li {
   font-size: 1.1rem;
   font-weight: bold;
   cursor: pointer;
-  color: #333;
+  color: rgb(6, 6, 6);
   display: flex;
   justify-content: space-between;
 }
@@ -126,15 +128,19 @@ li {
 
 .faq-answer {
   padding: 0 15px 15px;
-  color: #666;
+  color: #131111;
   line-height: 1.6;
 }
 
 /*Sección Columnas planes*/
 .planes-contenedor {
-  padding: 50px 20px;
+  padding: 20px 20px;
   text-align: center;
   background: #f4f4f4;
+  background-color: rgba(197, 197, 197, 0.5);
+  border-radius: 15px;
+  margin: 50px auto;
+  justify-content: center;
 }
 
 .grid-planes {
