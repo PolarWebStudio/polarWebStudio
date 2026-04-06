@@ -93,14 +93,14 @@ li {
   max-width: 800px;
   margin: 50px auto;
   text-align: left;
-  padding: 0 20px;
+  padding: 10px 80px;
   background-color: rgba(197, 197, 197, 0.5);
   border-radius: 15px; /* Sugerencia: bordes redondeados para que combine con tus tarjetas */
 }
 
 .faq h2 {
   text-align: center;
-  color: #003366;
+  color: #020203;
 }
 
 .faq-item {
