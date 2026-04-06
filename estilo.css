@@ -257,3 +257,41 @@ header .text-container p {
   transform: scale(1.2);
   transition: 0.3s;
 }
+
+/* ==========================================================================
+   6. Footer
+   ========================================================================== */
+.contacto-seccion {
+  padding: 60px 20px;
+  background-color: rgba(197, 197, 197, 0.3); /* Transparente como el FAQ */
+  margin: 50px auto;
+  border-radius: 15px;
+  max-width: 1000px;
+}
+
+.iconos-redes a {
+  font-size: 2.5rem;
+  color: #003366; /* Tu azul característico */
+  margin: 0 15px;
+  transition:
+    transform 0.3s,
+    color 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.iconos-redes a:hover {
+  color: #ff914d; /* Naranja como el plan destacado */
+  transform: translateY(-5px);
+}
+
+.btn-whatsapp {
+  background-color: #25d366;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  font-weight: bold;
+}
