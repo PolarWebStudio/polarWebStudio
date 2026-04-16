@@ -1,390 +1,357 @@
 <!doctype html>
+
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Polar Web Studio | Web Desing</title>
+    ```
+    <title>Polar Web Studio | Diseño y Desarrollo Web</title>
     <meta
       name="description"
-      content="Estudio digital especializado en soluciones web creativas y personalizadas."
+      content="Creamos páginas web modernas, rápidas y enfocadas en ventas."
     />
 
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:url"
-      content="https://polarwebstudio.github.io/polarWebStudio/"
-    />
-    <meta
-      property="og:title"
-      content="Polar Web Studio - Diseño y Desarrollo Web"
-    />
-    <meta
-      property="og:description"
-      content="Estudio digital especializado en soluciones web creativas y personalizadas."
-    />
-
-    <meta
-      property="og:image"
-      content="https://polarwebstudio.github.io/polarWebStudio/imagenes/Logo/PortadaPolarWebStudio.jpg"
-    />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:type" content="image/jpeg" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Polar Web Studio" />
-    <meta
-      name="twitter:image"
-      content="https://polarwebstudio.github.io/polarWebStudio/imagenes/Logo/PortadaPolarWebStudio.jpg"
-    />
-
+    <!-- CSS -->
     <link rel="stylesheet" href="estilo.css" />
 
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     />
+    ```
   </head>
-  <body>
-    <header>
-      <img src="./imagenes/Logo/LogoNuevoPolarWeb.png" alt="Polar Web Studio" />
 
-      <div class="text-container">
-        <h1>Polar Web Studio</h1>
-        <p>Web Design & Development</p>
+  <body>
+    <!-- HERO -->
+    <header class="hero">
+      <div class="hero-content">
+        <h1>Crea tu página web y empieza a vender hoy</h1>
+
+        <p>Diseño profesional, rápido y enfocado en resultados reales</p>
+
+        <div class="hero-botones">
+          <a href="https://wa.me/573155135785" class="btn-comprar">
+            Hablar por WhatsApp
+          </a>
+
+          <a href="#planes" class="btn-secundario"> Ver planes </a>
+        </div>
       </div>
     </header>
+    <!-- CONFIANZA -->
 
-    <section class="planes-contenedor">
-      <h2 class="titulo-seccion">Nuestros Planes de Diseño Web</h2>
+    <section class="confianza">
+      <h2>¿Por qué elegir Polar Web Studio?</h2>
+
       <div class="grid-planes">
-        <article class="tarjeta-plan">
-          <h3>Plan Lanzamiento</h3>
-          <div class="precio">$200.000 <span>/Pago único</span></div>
-          <ul>
-            <li>✅ Catálogo Digital</li>
-            <li>✅ Carrito de Compras</li>
-            <li>✅ Pedido a WhatsApp</li>
-            <li>✅ Hosting Gratis (GitHub)</li>
-          </ul>
-          <a
-            href="https://wa.me/573155135785?text=Hola%20Eduardo!%20Vengo%20de%20tu%20web%20y%20quiero%20el%20Plan%20Lanzamiento%20de%20200k"
-            class="btn-comprar"
-            style="text-decoration: none; display: block; text-align: center"
-            target="_blank"
-            rel="noopener noreferrer"
-            >¡Empezar mi negocio!</a
-          >
-        </article>
+        <div class="tarjeta-plan">
+          <h3>⚡ Entrega rápida</h3>
+          <p>Tu web lista en tiempo récord.</p>
+        </div>
 
+        ```
+        <div class="tarjeta-plan">
+          <h3>💰 Precios accesibles</h3>
+          <p>Soluciones reales para emprendedores.</p>
+        </div>
+
+        <div class="tarjeta-plan">
+          <h3>📈 Enfoque en ventas</h3>
+          <p>No solo diseño, resultados.</p>
+        </div>
+        ```
+      </div>
+    </section>
+
+    <!-- PLANES -->
+    <section class="planes-contenedor">
+      <h2 class="titulo-seccion">Planes de Desarrollo Web</h2>
+
+      <div class="grid-planes">
         <article class="tarjeta-plan destacado">
-          <div class="etiqueta-popular">Más Recomendado</div>
+          <span class="etiqueta-popular">Más recomendado</span>
+
           <h3>Tienda Virtual</h3>
-          <div class="precio">$850.000 <span>/Pago único</span></div>
+          <p class="precio">$850.000 <span>Pago único</span></p>
+
           <ul>
-            <li>✅ Catálogo de Productos</li>
-            <li>✅ Carrito de Compras</li>
-            <li>✅ Gestión de Inventario</li>
-            <li>✅ Integración con Pagos (Epayco/Wompi)</li>
+            <li>Catálogo completo</li>
+            <li>Pagos online</li>
+            <li>Inventario</li>
+            <li>Optimización</li>
           </ul>
+
           <a
-            href="https://wa.me/573155135785?text=Hola%20Eduardo!%20Me%20interesa%20la%20Tienda%20Virtual%20de%20850k"
+            href="https://wa.me/573155135785?text=Hola%20quiero%20la%20tienda%20virtual"
             class="btn-comprar"
-            style="text-decoration: none; display: block; text-align: center"
             target="_blank"
-            rel="noopener noreferrer"
-            >¡Quiero vender más!</a
           >
+            Vender más
+          </a>
         </article>
 
         <article class="tarjeta-plan">
           <h3>Plan Corporativo</h3>
-          <div class="precio">$1.500.000 <span>/Pago único</span></div>
+          <p class="precio">$1.500.000 <span>Pago único</span></p>
+
           <ul>
-            <li>✅ Hasta 10 secciones</li>
-            <li>✅ Correo corporativo</li>
-            <li>✅ Optimización SEO Google</li>
-            <li>✅ Soporte Premium 24/7</li>
+            <li>Hasta 10 secciones</li>
+            <li>SEO básico</li>
+            <li>Correo corporativo</li>
+            <li>Soporte premium</li>
           </ul>
+
           <a
-            href="https://wa.me/573155135785?text=Hola%20Eduardo!%20Me%20interesa%20el%20Plan%20Corporativo"
+            href="https://wa.me/573155135785?text=Hola%20quiero%20el%20plan%20corporativo"
             class="btn-comprar"
             target="_blank"
-            rel="noopener noreferrer"
-            style="text-decoration: none; display: block; text-align: center"
-            >Hablar con un experto</a
           >
+            Reservar mi cupo
+          </a>
         </article>
       </div>
     </section>
+    <!-- PLANES EXPRESS -->
+
     <section class="planes-contenedor">
-      <h2 class="titulo-seccion">Planes de Mantenimiento y Tranquilidad</h2>
+      <!-- BLOQUE DE URGENCIA -->
+
+      <section class="urgencia">
+        <h2>⚡ Cupos limitados esta semana</h2>
+
+        <p>
+          Solo estoy aceptando <strong>5 proyectos nuevos</strong> con estos
+          precios. Después de eso, los valores aumentan.
+        </p>
+
+        <div id="contador" class="contador">⏳ Oferta termina pronto</div>
+      </section>
+
+      <h2 class="titulo-seccion">Planes Exprés para Emprendedores</h2>
+      <p style="margin-bottom: 40px; color: #555">
+        Soluciones rápidas y económicas para empezar a vender hoy mismo
+      </p>
+
       <div class="grid-planes">
+        ```
+        <!-- 100K -->
         <article class="tarjeta-plan">
-          <h3>Soporte Vital</h3>
-          <div class="precio">$60.000 <span>/Mes</span></div>
+          <h3>Inicio Básico</h3>
+          <p class="precio">$100.000 <span>Pago único</span></p>
+
           <ul>
-            <li>✅ Copias de seguridad</li>
-            <li>✅ Actualizaciones de seguridad</li>
-            <li>✅ 1 cambio de contenido al mes</li>
+            <li>1 sección tipo landing</li>
+            <li>Botón de WhatsApp directo</li>
+            <li>Diseño responsive básico</li>
+            <li>Entrega en 24 horas</li>
+            <li>1 cambio incluido</li>
           </ul>
+
           <a
-            href="https://wa.me/573155135785?text=Hola!%20Me%20interesa%20el%20mantenimiento%20Básico"
+            href="https://wa.me/573155135785?text=Hola%20quiero%20el%20plan%20de%20100k"
             class="btn-comprar"
             target="_blank"
-            rel="noopener noreferrer"
-            >Asegurar mi web</a
           >
+            Empezar rápido
+          </a>
         </article>
 
+        <!-- 200K (ya lo tienes pero lo dejamos integrado) -->
         <article class="tarjeta-plan destacado">
-          <div class="etiqueta-popular">Plan Recomendado</div>
-          <h3>Crecimiento Activo</h3>
-          <div class="precio">$120.000 <span>/Mes</span></div>
+          <span class="etiqueta-popular">Más vendido</span>
+          <h3>Plan Lanzamiento</h3>
+          <p class="precio">$200.000 <span>Pago único</span></p>
+
           <ul>
-            <li>✅ Todo lo del Plan Vital</li>
-            <li>✅ 3 cambios de contenido</li>
-            <li>✅ Reporte mensual de visitas</li>
-            <li>✅ Optimización de velocidad</li>
+            <li>Catálogo digital básico</li>
+            <li>Carrito con pedido a WhatsApp</li>
+            <li>Hasta 10 productos</li>
+            <li>Optimización móvil</li>
+            <li>2 cambios incluidos</li>
           </ul>
+
           <a
-            href="https://wa.me/573155135785?text=Hola!%20Quiero%20el%20plan%20de%20mantenimiento%20Crecimiento"
+            href="https://wa.me/573155135785?text=Hola%20quiero%20el%20plan%20de%20200k"
             class="btn-comprar"
             target="_blank"
-            rel="noopener noreferrer"
-            >Impulsar mi marca</a
           >
+            Empezar negocio
+          </a>
         </article>
+
+        <!-- 300K -->
         <article class="tarjeta-plan">
-          <h3>Presencia Total</h3>
-          <div class="precio">$200.000 <span>/Mes</span></div>
+          <h3>Impulso Digital</h3>
+          <p class="precio">$300.000 <span>Pago único</span></p>
+
           <ul>
-            <li>✅ Todo lo del Plan Crecimiento</li>
-            <li>✅ Actualización de Blog o Noticias</li>
-            <li>✅ Optimización SEO mensual</li>
-            <li>✅ Soporte prioritario vía Meet/Zoom</li>
+            <li>Hasta 3 secciones</li>
+            <li>Catálogo hasta 20 productos</li>
+            <li>Botones de contacto (WhatsApp + redes)</li>
+            <li>Optimización de velocidad básica</li>
+            <li>3 cambios incluidos</li>
           </ul>
+
           <a
-            href="https://wa.me/573155135785?text=Hola!%20Me%20interesa%20el%20mantenimiento%20Premium"
+            href="https://wa.me/573155135785?text=Hola%20quiero%20el%20plan%20de%20300k"
             class="btn-comprar"
             target="_blank"
-            rel="noopener noreferrer"
-            >Delegar mi web</a
           >
+            Mejorar presencia
+          </a>
         </article>
-        
+
+        <!-- 400K -->
+        <article class="tarjeta-plan">
+          <h3>Negocio en Línea</h3>
+          <p class="precio">$400.000 <span>Pago único</span></p>
+          <p style="color: #ff0000; font-weight: bold">
+            ⏳ Disponible esta semana
+          </p>
+
+          <ul>
+            <li>Hasta 5 secciones</li>
+            <li>Catálogo hasta 40 productos</li>
+            <li>Diseño más personalizado</li>
+            <li>Optimización SEO básica</li>
+            <li>Integración redes sociales</li>
+          </ul>
+
+          <a
+            href="https://wa.me/573155135785?text=Hola%20quiero%20el%20plan%20de%20400k"
+            class="btn-comprar"
+            target="_blank"
+          >
+            Escalar negocio
+          </a>
+        </article>
+
+        <!-- 500K -->
+        <article class="tarjeta-plan">
+          <h3>Presencia Profesional</h3>
+          <p class="precio">$500.000 <span>Pago único</span></p>
+          <p style="color: #ff914d; font-weight: bold">
+            🔥 Últimos cupos disponibles
+          </p>
+
+          <ul>
+            <li>Hasta 7 secciones</li>
+            <li>Catálogo hasta 60 productos</li>
+            <li>Optimización SEO inicial</li>
+            <li>Optimización de rendimiento</li>
+            <li>Asesoría básica de ventas online</li>
+          </ul>
+
+          <a
+            href="https://wa.me/573155135785?text=Hola%20quiero%20el%20plan%20de%20500k"
+            class="btn-comprar"
+            target="_blank"
+          >
+            Quiero este plan
+          </a>
+        </article>
+        ```
       </div>
     </section>
-    <section
-      id="portfolio"
-      style="
-        padding: 20px 20px;
-        background-color: #ffffff;
-        text-align: center;
-        background-color: rgba(197, 197, 197, 0.5);
-        border-radius: 15px;
-        margin: 50px auto;
-        justify-content: center;
-      "
-    >
-      <h2 style="color: #00509d; font-size: 2rem; margin-bottom: 40px">
-        Proyectos Destacados
-      </h2>
 
-      <div
-        style="
-          max-width: 1000px;
-          margin: 0 auto;
-          background: #f9f9f9;
-          border-radius: 20px;
-          overflow: hidden;
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-          display: flex;
-          flex-wrap: wrap;
-          align-items: center;
-        "
-      >
-        <div style="flex: 1; min-width: 300px">
-          <img
-            src="./imagenes/Logo/logo_tienda_wancospet.jpeg"
-            alt="WanCos Pet Preview"
-            style="
-              width: 100%;
-              height: auto;
-              display: block;
-              border-bottom: 5px solid #003366;
-            "
-          />
-        </div>
+    <!-- PORTFOLIO -->
+    <section class="portfolio">
+      <h2 class="titulo-seccion">Proyecto Destacado</h2>
 
-        <div style="flex: 1; min-width: 300px; padding: 40px; text-align: left">
-          <h3 style="color: #003366; font-size: 1.8rem; margin-top: 0">
-            WanCos Pet
-          </h3>
-          <p style="color: #555; line-height: 1.6; font-size: 1.1rem">
-            Desarrollo integral de catálogo digital para E-Comerce.
-            Implementamos un sistema de navegación intuitivo que facilita la
-            compra directa mediante WhatsApp.
+      <div class="portfolio-card">
+        <img
+          src="imagenes/Logo/logo_tienda_wancospet.jpeg"
+          alt="Proyecto WanCos Pet"
+        />
+
+        <div class="portfolio-info">
+          <h3>WanCos Pet</h3>
+          <p>
+            Catálogo digital con pedidos automáticos por WhatsApp, optimizado
+            para conversión.
           </p>
-          <ul
-            style="list-style: none; padding: 0; color: #777; font-size: 0.9rem"
-          >
-            <li>🔹 Diseño 100% Responsivo</li>
-            <li>🔹 Optimización de imágenes</li>
-            <li>🔹 Interfaz amigable para el usuario</li>
-            <li>🔹 Contacto WhatsApp con pagina web</li>
-            <li>🔹 Estructuración del catalogo</li>
-          </ul>
+
           <a
             href="https://wancos-pet.github.io/WanCosPet/"
             target="_blank"
-            rel="noopener noreferrer"
-            style="
-              display: inline-block;
-              margin-top: 20px;
-              padding: 12px 25px;
-              background-color: #003366;
-              color: white;
-              text-decoration: none;
-              border-radius: 5px;
-              font-weight: bold;
-            "
+            class="btn-comprar"
           >
-            Ver sitio en vivo
+            Ver proyecto
           </a>
         </div>
       </div>
     </section>
+
+    <!-- TESTIMONIOS -->
+
+    <section class="testimonios">
+      <h2 class="titulo-seccion">Lo que dicen nuestros clientes</h2>
+
+      <div class="grid-planes">
+        ```
+        <div class="tarjeta-plan">
+          <p>
+            "Gracias a la página ahora recibo pedidos todos los días por
+            WhatsApp."
+          </p>
+          <strong>- Tienda local</strong>
+        </div>
+
+        <div class="tarjeta-plan">
+          <p>
+            "Pensé que era caro tener web, pero esto me ayudó a vender más."
+          </p>
+          <strong>- Emprendedor</strong>
+        </div>
+
+        <div class="tarjeta-plan">
+          <p>"Rápido, económico y funcional. Justo lo que necesitaba."</p>
+          <strong>- Negocio pequeño</strong>
+        </div>
+        ```
+      </div>
+    </section>
+
+    <!-- FAQ -->
     <section class="faq">
       <h2>Preguntas Frecuentes</h2>
 
       <div class="faq-item">
         <button class="faq-question">¿Tengo que pagar mensualidades?</button>
         <div class="faq-answer">
-          <p>
-            No. Con el Plan Lanzamiento y el Catálogo Emprendedor, el
-            alojamiento en la nube (GitHub) es gratuito de por vida. Solo pagas
-            una vez por el desarrollo.
-          </p>
+          <p>No. Solo pagas una vez por el desarrollo.</p>
         </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-question">
-          ¿Necesito saber de computadores para vender?
-        </button>
+        <button class="faq-question">¿Necesito saber de tecnología?</button>
         <div class="faq-answer">
-          <p>
-            Para nada. La página es intuitiva. Cuando un cliente compra, te
-            llega un mensaje organizado a tu WhatsApp con el pedido listo. ¡Tú
-            solo despachas!
-          </p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question">
-          ¿Qué pasa si quiero cambiar un precio después?
-        </button>
-        <div class="faq-answer">
-          <p>
-            Ofrecemos un servicio de mantenimiento económico o te enseñamos lo
-            básico para que tú mismo hagas ajustes pequeños en el catálogo.
-          </p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question">¿Mi página sale en Google?</button>
-        <div class="faq-answer">
-          <p>
-            Sí, aplicamos SEO básico para que tu negocio sea visible en los
-            motores de búsqueda de nivel nacional e internacional.
-          </p>
+          <p>No. Todo está listo para usar.</p>
         </div>
       </div>
     </section>
-    <section class="tecnologias">
-      <p>Tecnologías de alto rendimiento para tu negocio:</p>
-      <div class="iconos-tecnologias">
-        <i class="fab fa-html5" title="HTML5"></i>
-        <i class="fab fa-css3-alt" title="CSS3"></i>
-        <i class="fab fa-js" title="JavaScript"></i>
-        <i class="fab fa-github" title="GitHub"></i>
-        <i class="fab fa-whatsapp" title="WhatsApp Business"></i>
-      </div>
-    </section>
-    <script>
-      document.querySelectorAll(".faq-question").forEach((button) => {
-        button.addEventListener("click", () => {
-          const faqItem = button.parentElement;
-          faqItem.classList.toggle("active");
-          // Esto hace que la respuesta se oculte o se muestre
-          const answer = faqItem.querySelector(".faq-answer");
-          answer.style.display =
-            answer.style.display === "block" ? "none" : "block";
-        });
-      });
-    </script>
-    <section class="contacto-seccion">
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="contacto-seccion">
       <h2>¿Listo para empezar tu proyecto?</h2>
-      <div class="contacto-grid">
-        <div class="contacto-info">
-          <p>
-            <i class="fas fa-envelope"></i>
-            <strong>Email:</strong> polarwebstudio@gmail.com
-          </p>
-          <p>
-            <i class="fas fa-map-marker-alt"></i>
-            <strong>Ubicación:</strong> Bucaramanga, Santander
-          </p>
-          <a
-            href="https://wa.me/573155135785"
-            class="btn-whatsapp"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Escríbeme por WhatsApp</a
-          >
-        </div>
 
-        <div class="redes-sociales">
-          <p>Síguenos en nuestras redes:</p>
-          <div class="iconos-redes">
-            <a
-              href="https://www.facebook.com/profile.php?id=61573354557645"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Facebook"
-              ><i class="fab fa-facebook"></i
-            ></a>
-            <a
-              href="https://www.instagram.com/polarwebstudio/"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Instagram"
-              ><i class="fab fa-instagram"></i
-            ></a>
-            <a
-              href="https://linkedin.com/in/TuPerfil"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="LinkedIn"
-              ><i class="fab fa-linkedin"></i
-            ></a>
-            <a
-              href="https://github.com/polarwebstudio"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="GitHub"
-              ><i class="fab fa-github"></i
-            ></a>
-          </div>
-        </div>
-      </div>
+      <p>polarwebstudio@gmail.com</p>
+
+      <a href="https://wa.me/573155135785" class="btn-whatsapp" target="_blank">
+        Escríbeme por WhatsApp
+      </a>
     </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>© 2026 Polar Web Studio</p>
+      <a href="terminos.html">Términos y condiciones</a>
+    </footer>
+
+    <!-- JS -->
+    <script src="main.js"></script>
+    ```
   </body>
 </html>

@@ -1,375 +1,351 @@
-/* ==========================================================================
-   1. CONFIGURACIÓN GLOBAL Y CUERPO (BODY)
-   ========================================================================== */
+/* ===============================
+RESET Y BASE
+================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Segoe UI", Arial, sans-serif;
-  background-color: #f4f4f4;
+  background-color: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ===============================
+HERO (INDEX + TERMINOS)
+================================= */
+.hero {
+  background: linear-gradient(135deg, #003366, #00509d);
+  color: white;
   text-align: center;
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-  overflow-x: hidden;
+  padding: 100px 20px;
 }
 
-/* Marca de Agua Polar al fondo */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-image: url("./imagenes/Logo/LogoNuevoPolarWeb.png");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  filter: none;
-  z-index: -2;
-  pointer-events: none;
-  opacity: 0.2;
+.hero-secundario {
+  padding: 80px 20px;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
 }
 
-/* ==========================================================================
-   2. CABECERA (HEADER)
-   ========================================================================== */
-header {
-  background-color: transparent;
-  padding: 40px 20px; /* Aumenté un poco para separar del borde superior */
-  max-width: 1200px;
-  margin: 0 auto 50px auto; /* El último valor separa el header de los planes */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-}
-
-header img {
-  width: 200px;
-  height: auto;
-  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
-}
-
-header .text-container h1 {
-  color: #660041;
-  font-size: 3rem;
-  margin: 0 0 10px 0;
-  line-height: 1.2;
-}
-
-header .text-container p {
-  color: #100f0f;
+.hero p {
   font-size: 1.2rem;
-  margin: 0;
+  opacity: 0.9;
 }
 
-/* ==========================================================================
-   3. SECCIÓN DE PLANES
-   ========================================================================== */
+.hero-content {
+  max-width: 700px;
+  margin: auto;
+}
+
+.hero-botones {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn-secundario {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+}
+
+/* ===============================
+BOTONES
+================================= */
+.btn-comprar,
+.btn-whatsapp {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.btn-comprar {
+  background: #ff914d;
+  color: white;
+}
+
+.btn-comprar:hover {
+  background: #ff7a26;
+  transform: translateY(-3px);
+}
+
+.btn-whatsapp {
+  background: #25d366;
+  color: white;
+}
+
+.btn-whatsapp:hover {
+  transform: scale(1.05);
+}
+
+/* ===============================
+PLANES
+================================= */
 .planes-contenedor {
   max-width: 1200px;
-  margin: 50px auto;
-  padding: 40px 20px;
-  background-color: rgba(197, 197, 197, 0.5);
-  border-radius: 15px;
+  margin: 80px auto;
+  padding: 20px;
   text-align: center;
 }
 
-/* 🔥 ESTO SOLUCIONA TU PROBLEMA: Separa el título de las tarjetas */
 .titulo-seccion {
-  margin-bottom: 50px;
+  font-size: 2rem;
   color: #003366;
-  font-size: 2.2rem;
+  margin-bottom: 50px;
 }
 
 .grid-planes {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  justify-content: center;
   gap: 30px;
-  margin: 0 auto;
 }
 
-/* Tarjetas individuales */
 .tarjeta-plan {
   background: white;
-  padding: 40px 30px;
   border-radius: 20px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   transition: 0.3s;
-  position: relative;
-  border: 1px solid #ddd;
 }
 
 .tarjeta-plan:hover {
   transform: translateY(-10px);
 }
 
-/* Plan Destacado (Tienda Virtual) */
-.tarjeta-plan.destacado {
-  border: 4px solid #ff914d;
-  transform: scale(
-    1.05
-  ); /* Un poco menos agresivo que 1.08 para no romper el grid */
-  z-index: 1;
+.tarjeta-plan h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 }
 
-.etiqueta-popular {
-  position: absolute;
-  top: -15px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #ff914d;
-  color: white;
-  padding: 5px 15px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: bold;
-}
-
-/* Precios y listas */
 .precio {
-  font-size: 2.5rem;
-  font-weight: 800;
+  font-size: 2rem;
   margin: 20px 0;
-  color: #333;
+  color: #003366;
 }
 
 .precio span {
   display: block;
   font-size: 0.9rem;
-  color: #003366;
-  margin-top: 5px;
-  font-weight: normal;
+  color: #777;
+}
+
+.tarjeta-plan ul {
+  list-style: none;
+  margin-bottom: 20px;
+  text-align: left;
 }
 
 .tarjeta-plan ul li {
-  text-align: left;
-  margin-bottom: 15px;
-  font-size: 0.95rem;
+  margin-bottom: 10px;
 }
 
-/* Botones de compra */
-.btn-comprar {
-  background: #003366;
-  color: white;
-  width: 100%;
-  padding: 15px 0;
-  border: none;
-  border-radius: 10px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: block;
-  text-align: center;
-  text-decoration: none;
-  box-sizing: border-box;
+/* DESTACADO */
+.tarjeta-plan.destacado {
+  border: 3px solid #ff914d;
+  transform: scale(1.05);
 }
 
-.destacado .btn-comprar {
+.etiqueta-popular {
   background: #ff914d;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  display: inline-block;
+  margin-bottom: 10px;
 }
 
-.btn-comprar:hover {
-  background: #00509d;
-  transform: scale(1.02);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+/* ===============================
+PORTFOLIO
+================================= */
+.portfolio {
+  padding: 80px 20px;
 }
 
-/* ==========================================================================
-   4. PREGUNTAS FRECUENTES (FAQ)
-   ========================================================================== */
+.portfolio-card {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-card img {
+  width: 100%;
+  max-width: 500px;
+  object-fit: cover;
+}
+
+.portfolio-info {
+  flex: 1;
+  padding: 40px;
+  text-align: left;
+}
+
+.portfolio-info h3 {
+  color: #003366;
+  margin-bottom: 15px;
+}
+
+/* ===============================
+FAQ
+================================= */
 .faq {
   max-width: 800px;
   margin: 80px auto;
-  text-align: left;
   padding: 40px;
-  background-color: rgba(197, 197, 197, 0.5);
+  background: white;
   border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .faq h2 {
   text-align: center;
-  color: #00509d;
   margin-bottom: 30px;
 }
 
 .faq-item {
-  margin-bottom: 10px;
   border-bottom: 1px solid #ddd;
 }
 
 .faq-question {
   width: 100%;
-  background: none;
-  border: none;
   text-align: left;
   padding: 15px;
-  font-size: 1.1rem;
+  background: none;
+  border: none;
   font-weight: bold;
   cursor: pointer;
-  color: #000;
-  display: flex;
-  justify-content: space-between;
-}
-
-.faq-question:hover {
-  color: #003366;
 }
 
 .faq-answer {
+  display: none;
   padding: 0 15px 15px;
-  color: #131111;
-  line-height: 1.6;
 }
 
-/* ==========================================================================
-   5. TECNOLOGÍAS
-   ========================================================================== */
-.tecnologias {
-  padding: 50px 0;
-  background: #e9e9e9;
-  border-top: 1px solid #eee;
+.faq-item.active .faq-answer {
+  display: block;
 }
 
-.tecnologias p {
-  color: #010305;
-  font-size: 0.9rem;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.iconos-tecnologias {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  font-size: 2.5rem;
-  color: #003366;
-  opacity: 0.7;
-}
-
-.iconos-tecnologias i:hover {
-  opacity: 1;
-  transform: scale(1.2);
-  transition: 0.3s;
-}
-
-/* ==========================================================================
-   6. Footer
-   ========================================================================== */
+/* ===============================
+CONTACTO
+================================= */
 .contacto-seccion {
-  padding: 60px 20px;
-  background-color: rgba(197, 197, 197, 0.3); /* Transparente como el FAQ */
-  margin: 50px auto;
-  border-radius: 15px;
-  max-width: 1000px;
-}
-
-.iconos-redes a {
-  font-size: 2.5rem;
-  color: #003366; /* Tu azul característico */
-  margin: 0 15px;
-  transition:
-    transform 0.3s,
-    color 0.3s;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.iconos-redes a:hover {
-  color: #ff914d; /* Naranja como el plan destacado */
-  transform: translateY(-5px);
-}
-
-.btn-whatsapp {
-  background-color: #25d366;
+  background: linear-gradient(135deg, #00509d, #003366);
   color: white;
-  padding: 12px 25px;
-  border-radius: 50px;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 20px;
-  font-weight: bold;
+  text-align: center;
+  padding: 80px 20px;
 }
 
-/* ==========================================================================
-   7. ADAPTABILIDAD MEDIA QUERIES
-   ========================================================================== */
+/* ===============================
+TERMINOS Y CONDICIONES
+================================= */
+.contenedor-legal {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 20px;
+  text-align: left;
+}
 
-/* --- A. MÓVILES (Pantallas pequeñas hasta 600px) --- */
-@media (max-width: 600px) {
-  header {
+.bloque-legal {
+  margin-bottom: 40px;
+}
+
+.bloque-legal h2 {
+  color: #003366;
+  margin-bottom: 15px;
+}
+
+.bloque-legal ul {
+  padding-left: 20px;
+}
+
+.volver-inicio {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* ===============================
+FOOTER
+================================= */
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+
+/* ===============================
+RESPONSIVE
+================================= */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .portfolio-card {
     flex-direction: column;
-    text-align: center;
-    gap: 15px;
-  }
-
-  header img {
-    width: 120px;
-  }
-
-  header .text-container h1 {
-    font-size: 1.8rem;
-  }
-
-  .grid-planes,
-  .grid-productos,
-  .grid-mascotas {
-    grid-template-columns: 1fr; /* Una sola columna en móvil */
-    padding: 10px;
-  }
-
-  .faq {
-    padding: 20px;
   }
 }
 
-/* --- B. TABLETS Y FOLD ABIERTO (601px hasta 1024px) --- */
-@media (min-width: 601px) and (max-width: 1024px) {
-  .grid-planes,
-  .grid-productos,
-  .grid-mascotas {
-    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
-    gap: 20px;
-    padding: 20px;
-  }
-
-  header .text-container h1,
-  h1 {
-    font-size: 2.5rem;
-  }
-
-  .hero-seccion {
-    flex-direction: row;
-    text-align: left;
-    padding: 40px;
-  }
-
-  .tarjeta-producto img {
-    height: 250px;
-    object-fit: cover;
-  }
+/* ===============================
+URGENCIA
+================================= */
+.urgencia {
+  background: #0e1ac9;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  margin: 60px auto;
+  border-radius: 15px;
+  max-width: 900px;
 }
 
-/* --- C. PORTÁTILES Y PANTALLAS ESTÁNDAR (1025px hasta 1200px) --- */
-@media (min-width: 1025px) and (max-width: 1200px) {
-  .grid-planes {
-    grid-template-columns: repeat(3, 1fr); /* Ya caben tres columnas */
-  }
+.urgencia h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+/* ===============================
+CONTADOR
+================================= */
+
+.contador {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 1.1rem;
 }
 
-/* --- D. PANTALLAS GRANDES Y ALTA RESOLUCIÓN (Más de 1201px) --- */
-@media (min-width: 1201px) {
-  .planes-contenedor {
-    max-width: 1300px;
-  }
+/* ===============================
+TESTIMONIOS
+================================= */
+.testimonios {
+  max-width: 1000px;
+  margin: 80px auto;
+  text-align: center;
+}
 
-  .grid-planes {
-    grid-template-columns: repeat(3, 1fr);
-  }
+/* ===============================
+Confianza
+================================= */
+.confianza {
+  max-width: 1000px;
+  margin: 80px auto;
+  text-align: center;
 }
