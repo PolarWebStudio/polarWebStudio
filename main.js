@@ -1,8 +1,19 @@
 const contador = document.getElementById("contador");
 
 if (contador) {
-  const tiempoFinal = new Date().getTime() + 48 * 60 * 60 * 1000;
+  // 🔥 1. Revisar si ya existe un tiempo guardado
+  let tiempoFinal = localStorage.getItem("tiempoFinal");
 
+  // 🔥 2. Si NO existe, lo creamos (48h desde ahora)
+  if (!tiempoFinal) {
+    tiempoFinal = new Date().getTime() + 48 * 60 * 60 * 1000;
+    localStorage.setItem("tiempoFinal", tiempoFinal);
+  }
+
+  // 🔥 3. Convertir a número
+  tiempoFinal = parseInt(tiempoFinal);
+
+  // 🔥 4. Contador
   setInterval(() => {
     const ahora = new Date().getTime();
     const diferencia = tiempoFinal - ahora;
@@ -15,6 +26,7 @@ if (contador) {
 
     if (diferencia < 0) {
       contador.innerHTML = "⚠️ Oferta finalizada";
+      localStorage.removeItem("tiempoFinal"); // opcional: reinicia después
     }
   }, 1000);
 }
